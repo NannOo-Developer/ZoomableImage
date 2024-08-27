@@ -33,8 +33,29 @@ android {
     }
 }
 
-dependencies {
 
+publishing {
+    publications {
+        create<MavenPublication>("bar") {
+            groupId = "com.nannoo"
+            artifactId = "zoomImageView"
+            version = "1.0"
+        }
+    }
+}
+
+//repositories {
+//    maven {
+//        name = "GithubPackages"
+//        url = uri("https://maven.pkg.github.com/NannOo-Developer/ZoomableImage")
+//        credentials {
+//            username = "NannOo"
+//            password = "mno@$123"
+//        }
+//    }
+//}
+
+dependencies {
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
     implementation(libs.material)

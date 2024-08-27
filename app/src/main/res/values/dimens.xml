@@ -3,4 +3,5 @@
     <dimen name="margin_10x">40dp</dimen>
     <dimen name="margin_4x">16dp</dimen>
     <dimen name="margin_1x">4dp</dimen>
+    <dimen name="margin_0x">0dp</dimen>
 </resources>
