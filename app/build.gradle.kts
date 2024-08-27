@@ -53,6 +53,6 @@ dependencies {
     implementation(libs.glide)
     annotationProcessor(libs.compiler)
 
-    implementation(project(":zoomableImageView"))
+    implementation (libs.zoomableimage)
 
 }

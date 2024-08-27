@@ -25,9 +25,16 @@ android {
         }
     }
     compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_1_8
-        targetCompatibility = JavaVersion.VERSION_1_8
+        sourceCompatibility = JavaVersion.VERSION_17
+        targetCompatibility = JavaVersion.VERSION_17
     }
+
+    java{
+        toolchain{
+            languageVersion = JavaLanguageVersion.of(17)
+        }
+    }
+
     kotlinOptions {
         jvmTarget = "1.8"
     }
@@ -36,11 +43,17 @@ android {
 
 publishing {
     publications {
-        create<MavenPublication>("bar") {
-            groupId = "com.nannoo"
-            artifactId = "zoomImageView"
+        create<MavenPublication>("maven") {
+            groupId = "com.github.nannoo.developer"
+            artifactId = "zoomableImageView"
             version = "1.0"
+            pom{
+                description = "Zoom Image Library"
+            }
         }
+    }
+    repositories{
+        mavenLocal()
     }
 }
 
